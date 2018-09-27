@@ -159,10 +159,12 @@
   <ItemGroup>
     <Content Include="Content\images\download.jpg" />
     <Content Include="Content\images\honor.jpg" />
+    <Content Include="Content\images\redmi.jpg" />
     <Content Include="Content\images\samsung.jpg" />
+    <Content Include="Content\images\vivo.jpg" />
     <Content Include="NewProduct.aspx" />
     <Content Include="ProductDelete.aspx" />
-    <Content Include="ProductDescription.aspx" />
+    <Content Include="ProductsDescription.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="Productmanagement.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
@@ -201,6 +203,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="ProductPreview.aspx" />
     <Content Include="Productupdate.aspx" />
+    <Content Include="UserPage.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -358,12 +361,12 @@
     <Compile Include="ProductDelete.aspx.designer.cs">
       <DependentUpon>ProductDelete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductDescription.aspx.cs">
-      <DependentUpon>ProductDescription.aspx</DependentUpon>
+    <Compile Include="ProductsDescription.aspx.cs">
+      <DependentUpon>ProductsDescription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductDescription.aspx.designer.cs">
-      <DependentUpon>ProductDescription.aspx</DependentUpon>
+    <Compile Include="ProductsDescription.aspx.designer.cs">
+      <DependentUpon>ProductsDescription.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
@@ -430,6 +433,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

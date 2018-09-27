@@ -32,17 +32,17 @@ namespace Assignment
 
                 HyperLink HlPreview = new HyperLink();
                 PlaceHolder1.Controls.Add(HlPreview);
-                HlPreview.NavigateUrl = "ProductDescription?id=" + pi.Id;
+                HlPreview.NavigateUrl = "ProductsDescription?id=" + pi.Id;
                 HlPreview.Text = "Preview";
 
                 HyperLink HlUpdate = new HyperLink();
                 PlaceHolder1.Controls.Add(HlUpdate);
-                HlUpdate.NavigateUrl = "ProductDescription?id=" + pi.Id;
+                HlUpdate.NavigateUrl = "ProductUpdate?id=" + pi.Id;
                 HlUpdate.Text = "Update";
 
                 HyperLink HlDelete = new HyperLink();
                 PlaceHolder1.Controls.Add(HlDelete);
-                HlDelete.NavigateUrl = "ProductDescription?id=" + pi.Id;
+                HlDelete.NavigateUrl = "ProductDelete?id=" + pi.Id;
                 HlDelete.Text = "Delete";
               
               
@@ -53,7 +53,7 @@ namespace Assignment
 
         public void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ProductDescription.aspx");
+            Response.Redirect("NewProduct");
         }
     }
 }

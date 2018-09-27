@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL.Model;
+using DAL.Repository;
 
 namespace Assignment
 {
@@ -13,5 +15,17 @@ namespace Assignment
         {
 
         }
+
+        protected void btndelete_Click(object sender, EventArgs e)
+        {
+            RepositoryFile rf = new RepositoryFile();
+
+            int id = Convert.ToInt32(txtid.Text);
+            rf.DeleteDetails(id);
+            lbldelete.Text = "Product Deleted Successfully";
+        }
+
+
+
     }
 }

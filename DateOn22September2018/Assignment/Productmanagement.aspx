@@ -10,5 +10,5 @@
     </h2>
     
    
-   <%-- <a class="btn btn-default" href="ProductList.aspx.cs">ProductList</a>--%>
+  
 </asp:Content>

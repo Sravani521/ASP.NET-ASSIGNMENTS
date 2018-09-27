@@ -4,25 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
 using DAL.Repository;
 using DAL.Model;
 
-
 namespace Assignment
 {
-    public partial class ProductList : System.Web.UI.Page
+    public partial class UserPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             Table dt = new Table();
             RepositoryFile rf = new RepositoryFile();
             List<ProductsInformation> li = new List<ProductsInformation>();
-            li=rf.GetDetails();
+            li = rf.GetDetails();
             foreach (ProductsInformation pi in li)
             {
                 TableRow tr = new TableRow();
-                
+
 
                 TableCell tc = new TableCell();
 
@@ -42,11 +40,8 @@ namespace Assignment
                 dt.Rows.Add(tr);
                 PlaceHolder1.Controls.Add(dt);
             }
-          
 
 
-           
-           
         }
     }
 }
