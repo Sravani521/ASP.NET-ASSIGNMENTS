@@ -29,12 +29,13 @@ namespace SourceDAL.Repository
                 {
                     while (dr.Read())
                     {
-                        SourceProporties sp = new SourceProporties
+                        SourceProporties sp = new SourceProporties()
                         {
-                           // SourceId = Convert.ToInt32(dr["Id"].ToString()),
-                            SourceName = dr["SName"].ToString()
+                            SourceId = Convert.ToInt32(dr["Id"]),
+                            SourceName = dr["Name"].ToString()
                         };
                         source.Add(sp);
+                        
                     }
 
                 }
@@ -57,6 +58,37 @@ namespace SourceDAL.Repository
 
             }
 
+        }
+
+
+
+        public void DeleteSources(int Id)
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
+                connection.Open();
+                SqlCommand command = new SqlCommand("Proc_DeleteSource",connection);   
+                
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@SourceId",Id);
+                command.ExecuteNonQuery();
+               
+
+            }
+
+        }
+
+        public void EditSources(string SName)
+        {
+            using (SqlConnection connection= new SqlConnection())
+            {
+                connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
+                connection.Open();
+                SqlCommand command = new SqlCommand("update Source set ", connection);
+                command.ExecuteNonQuery();
+
+            }
         }
     }
 }

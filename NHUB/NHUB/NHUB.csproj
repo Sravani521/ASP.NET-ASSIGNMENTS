@@ -181,6 +181,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="DeleteSource.aspx" />
+    <Content Include="EditSource.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -373,6 +374,13 @@
     </Compile>
     <Compile Include="DeleteSource.aspx.designer.cs">
       <DependentUpon>DeleteSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSource.aspx.cs">
+      <DependentUpon>EditSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSource.aspx.designer.cs">
+      <DependentUpon>EditSource.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

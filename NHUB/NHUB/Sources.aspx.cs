@@ -16,6 +16,38 @@ namespace NHUB
             SourceRepository sr = new SourceRepository();
             List<SourceProporties> li = new List<SourceProporties>();
             li = sr.SourceGetDetails();
+            Table tb = new Table();
+
+            foreach(SourceProporties sp in li)
+            {
+                TableRow tr = new TableRow();
+                tb.Rows.Add(tr);
+
+                TableCell tc = new TableCell();
+                tr.Cells.Add(tc);
+
+                Label SNameLabel = new Label();
+                PlaceHolder1.Controls.Add(SNameLabel);
+                SNameLabel.Text = sp.SourceName;
+                SNameLabel.Width = 200;
+
+
+
+                HyperLink SourceDeleteHyperLink= new HyperLink();
+                PlaceHolder1.Controls.Add(SourceDeleteHyperLink);             
+                SourceDeleteHyperLink.Text = "Delete";                
+                SourceDeleteHyperLink.NavigateUrl = "DeleteSource?Id="+sp.SourceId;
+                SourceDeleteHyperLink.Width = 700;
+
+                //HyperLink SourceEditHyperLink = new HyperLink();
+                //PlaceHolder1.Controls.Add(SourceEditHyperLink);
+                //SourceEditHyperLink.Text = "Edit";
+                //SourceEditHyperLink.NavigateUrl=""
+
+
+
+            }
+            
 
         }
 

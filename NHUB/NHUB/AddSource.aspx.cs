@@ -25,10 +25,10 @@ namespace NHUB
 
         protected void CreateSourceButton_Click(object sender, EventArgs e)
         {
-            SourceRepository sr = new SourceRepository();
-           
+            SourceRepository sr = new SourceRepository();           
             string Name = NameTextBox.Text;
             sr.InsertSources(Name);
+            AddSuccessLabel.Text = "successfully created source";
         }
     }
 }
