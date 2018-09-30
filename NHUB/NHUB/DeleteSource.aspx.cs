@@ -11,11 +11,11 @@ namespace NHUB
 {
     public partial class DeleteSource : System.Web.UI.Page
     {
-        int pId;
+        int SId;
         protected void Page_Load(object sender, EventArgs e)
         {
             int Id = Convert.ToInt32(Request.QueryString["Id"]);
-            pId = Id;
+            SId = Id;
             SourceRepository sr = new SourceRepository();
             List < SourceProporties > sp= sr.SourceGetDetails();
 
@@ -34,15 +34,10 @@ namespace NHUB
         {
             
             SourceRepository sr = new SourceRepository();
-            Label DeleteSourceNameLabel = new Label();
-            //PlaceHolder1.Controls.Add(DeleteSourceNameLabel);
-            //DeleteSourceNameLabel.Text=
-            sr.DeleteSources(pId);
+            Label DeleteSourceNameLabel = new Label();           
+            sr.DeleteSources(SId);
             DeleteSourceLabel.Text = "deleted source";
-            
-           
-
-        
+                              
         }
 
         protected void CancelSourceButton_Click(object sender, EventArgs e)

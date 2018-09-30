@@ -34,33 +34,35 @@ namespace SourceDAL.Repository
                             SourceId = Convert.ToInt32(dr["Id"]),
                             SourceName = dr["Name"].ToString()
                         };
-                        source.Add(sp);
-                        
+                        source.Add(sp);                       
                     }
-
                 }
-
             }
             return source;
         }
-
+       
 
         public void InsertSources(string SName)
         {
-
             using (SqlConnection connection = new SqlConnection())
             {
                 connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
                 connection.Open();
-
-                SqlCommand command = new SqlCommand("insert into Source(Name) values('" + SName + "')", connection);
-                command.ExecuteNonQuery();
-
+                string sql = "insert into Source" + "(Name) values" + "(@Name)";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    SqlParameter parameter = new SqlParameter
+                    {
+                        ParameterName = "@Name",
+                        Value = SName,
+                        SqlDbType = SqlDbType.Char,
+                        Size = 10
+                    };
+                    command.Parameters.Add(parameter);
+                    command.ExecuteNonQuery();
+                }
             }
-
         }
-
-
 
         public void DeleteSources(int Id)
         {
@@ -68,26 +70,35 @@ namespace SourceDAL.Repository
             {
                 connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
                 connection.Open();
-                SqlCommand command = new SqlCommand("Proc_DeleteSource",connection);   
-                
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@SourceId",Id);
-                command.ExecuteNonQuery();
-               
-
+                string sql = "delete from Source where Id=" + "(@Id)";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    SqlParameter parameter = new SqlParameter
+                    {
+                        ParameterName = "@Id",
+                        Value = Id,
+                        SqlDbType = SqlDbType.Int,
+                        Size = 10
+                    };
+                    command.Parameters.Add(parameter);
+                    command.ExecuteNonQuery();
+                                       
+                }
             }
-
         }
 
-        public void EditSources(string SName)
+        public void EditSources(string NewName,string Name)
         {
-            using (SqlConnection connection= new SqlConnection())
+            using (SqlConnection connection = new SqlConnection())
             {
                 connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
                 connection.Open();
-                SqlCommand command = new SqlCommand("update Source set ", connection);
-                command.ExecuteNonQuery();
-
+                string sql = $"update Source set  Name='{NewName}' where Name='{Name}'";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }

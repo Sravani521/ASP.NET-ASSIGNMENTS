@@ -37,12 +37,15 @@ namespace NHUB
                 PlaceHolder1.Controls.Add(SourceDeleteHyperLink);             
                 SourceDeleteHyperLink.Text = "Delete";                
                 SourceDeleteHyperLink.NavigateUrl = "DeleteSource?Id="+sp.SourceId;
-                SourceDeleteHyperLink.Width = 700;
+                SourceDeleteHyperLink.Width = 100;
 
-                //HyperLink SourceEditHyperLink = new HyperLink();
-                //PlaceHolder1.Controls.Add(SourceEditHyperLink);
-                //SourceEditHyperLink.Text = "Edit";
-                //SourceEditHyperLink.NavigateUrl=""
+                HyperLink SourceEditHyperLink = new HyperLink();
+                PlaceHolder1.Controls.Add(SourceEditHyperLink);
+                SourceEditHyperLink.Text = "Edit";
+                SourceEditHyperLink.NavigateUrl = "EditSource?SName=" + sp.SourceName;
+                SourceEditHyperLink.Width = 700;
+
+                
 
 
 
