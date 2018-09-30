@@ -97,8 +97,8 @@ D:\sravani\ASP.NET\NHUB\NHUB\bin\Microsoft.Owin.Security.Twitter.xml
 D:\sravani\ASP.NET\NHUB\NHUB\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\sravani\ASP.NET\NHUB\NHUB\bin\Microsoft.Owin.Security.OAuth.xml
 D:\sravani\ASP.NET\NHUB\NHUB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.csprojAssemblyReference.cache
 D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.csproj.CoreCompileInputs.cache
 D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.csproj.CopyComplete
 D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.dll
 D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.pdb
+D:\sravani\ASP.NET\NHUB\NHUB\obj\Debug\NHUB.csprojAssemblyReference.cache

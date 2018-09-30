@@ -23,14 +23,20 @@ namespace NHUB
             Response.Redirect("Sources.aspx");
         }
 
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            string Name = RenameTextBox.Text;
             SourceRepository sr = new SourceRepository();
-            sr.EditSources(Name,SName);
-            StatusLabel.Text = "rename success";
-
+            string Name = RenameTextBox.Text;
+            if (Name == "")
+            {
+                status.Text = "please enter the name";
+            }
+            else
+            {
+                sr.EditSources(Name, SName);
+                StatusLabel.Text = "rename success";
+            }
         }
     }
 }

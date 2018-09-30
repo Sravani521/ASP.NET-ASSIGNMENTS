@@ -18,8 +18,8 @@
         &nbsp;
    
        <h3> <asp:Button ID="DeleteSourceButton" runat="server" Height="53px" Text="Delete" Width="166px" OnClick="DeleteSourceButton_Click" ToolTip="click to delete" />
-        <asp:Button ID="CancelSourceButton" runat="server" Height="51px" style="margin-left: 65px; margin-top: 0" Text="Cancel" Width="176px" OnClick="CancelSourceButton_Click" ToolTip="click to go back" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <asp:Label ID="DeleteSourceLabel" runat="server" Text="Label"></asp:Label>
+        <asp:Button ID="CancelSourceButton" runat="server" Height="51px" style="margin-left: 65px; margin-top: 0" Text="Cancel" Width="176px" OnClick="CancelSourceButton_Click" ToolTip="click to go back" />
+           <asp:Label ID="DeleteSourceLabel" runat="server"></asp:Label>
         </h3>
    
         &nbsp;

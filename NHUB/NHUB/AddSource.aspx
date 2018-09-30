@@ -6,16 +6,13 @@
     <h3>
         <asp:Label ID="NameLabel" runat="server" Text="Name"></asp:Label>
         <asp:TextBox ID="NameTextBox" runat="server" Height="42px" style="margin-left: 42px" Width="186px"></asp:TextBox>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NameTextBox" ErrorMessage="please enter the source name"></asp:RequiredFieldValidator>
+        <asp:Label ID="status" runat="server"></asp:Label>
    
        
     
        <br />
    
        
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="please enter alphabets only" ValidationExpression="[a-zA-Z ]*$" ControlToValidate="NameTextBox"></asp:RegularExpressionValidator>
-        
     </h3>
         &nbsp;
     
