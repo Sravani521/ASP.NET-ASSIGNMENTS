@@ -11,4 +11,8 @@ namespace SourceDAL.Model
         public int SourceId { get; set; }
         public string SourceName { get; set; }
     }
+    public class SourceNewName
+    {
+        public string ReName { get; set; }
+    }
 }

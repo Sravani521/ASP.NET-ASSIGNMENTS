@@ -12,9 +12,12 @@ namespace NHUB
 {
     public partial class AddSource : System.Web.UI.Page
     {
+        SourceRepository sr = new SourceRepository();
+        List<SourceProporties> source = new List<SourceProporties>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
+            sr.SourceGetDetails();
         }
 
         protected void CancelSourceButton_Click(object sender, EventArgs e)
@@ -26,19 +29,21 @@ namespace NHUB
         protected void CreateSourceButton_Click(object sender, EventArgs e)
         {
 
-            SourceRepository sr = new SourceRepository();           
+            
             string Name = NameTextBox.Text;
-            if (Name=="")
-            {
-                status.Text = "please fill the Name";
-            }
-            else
-            {
-                sr.InsertSources(Name);
-                AddSuccessLabel.Text = "successfully created source";
 
-            }
-           
+                if (Name == "")
+                {
+                    status.Text = "please fill the Name";
+                }
+                else
+                {
+                    sr.InsertSources(Name);
+                    AddSuccessLabel.Text = "successfully created source";
+
+                }
+                       
+                                            
         }
     }
 }

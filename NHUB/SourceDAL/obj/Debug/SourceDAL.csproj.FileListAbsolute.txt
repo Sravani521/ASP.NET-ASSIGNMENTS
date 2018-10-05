@@ -1,5 +1,6 @@
 D:\sravani\ASP.NET\NHUB\SourceDAL\bin\Debug\SourceDAL.dll
 D:\sravani\ASP.NET\NHUB\SourceDAL\bin\Debug\SourceDAL.pdb
+D:\sravani\ASP.NET\NHUB\SourceDAL\obj\Debug\SourceDAL.csprojAssemblyReference.cache
 D:\sravani\ASP.NET\NHUB\SourceDAL\obj\Debug\SourceDAL.csproj.CoreCompileInputs.cache
 D:\sravani\ASP.NET\NHUB\SourceDAL\obj\Debug\SourceDAL.dll
 D:\sravani\ASP.NET\NHUB\SourceDAL\obj\Debug\SourceDAL.pdb

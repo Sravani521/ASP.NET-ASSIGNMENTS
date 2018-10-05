@@ -11,6 +11,7 @@ namespace NHUB
 {
     public partial class EditSource : System.Web.UI.Page
     {
+        SourceRepository sr = new SourceRepository();
         string SName;        
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,7 +27,7 @@ namespace NHUB
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SourceRepository sr = new SourceRepository();
+            
             string Name = RenameTextBox.Text;
             if (Name == "")
             {

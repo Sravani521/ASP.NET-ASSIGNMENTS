@@ -11,9 +11,12 @@ namespace SourceDAL.Repository
 {
     public class SourceRepository
     {
+        List<SourceProporties> source = new List<SourceProporties>();
+        List<SourceNewName> sourcenewname = new List<SourceNewName>();
+
         public List<SourceProporties> SourceGetDetails()
         {
-            List<SourceProporties> source = new List<SourceProporties>();
+            
 
             using (SqlConnection connection = new SqlConnection())
             {
@@ -21,10 +24,8 @@ namespace SourceDAL.Repository
                 connection.Open();
 
                 string sql = "select * from Source";
-
-
-                SqlCommand command = new SqlCommand(sql, connection);
-
+                         
+                SqlCommand command = new SqlCommand(sql, connection);            
                 using (SqlDataReader dr = command.ExecuteReader())
                 {
                     while (dr.Read())
@@ -37,32 +38,35 @@ namespace SourceDAL.Repository
                         source.Add(sp);                       
                     }
                 }
-            }
-            return source;
-        }
-       
 
-        public void InsertSources(string SName)
-        {
-            using (SqlConnection connection = new SqlConnection())
+            }
+                
+                return source;
+        }
+        
+
+
+            public void InsertSources(object source)
             {
-                connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
-                connection.Open();
-                string sql = "insert into Source" + "(Name) values" + "(@Name)";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection())
                 {
-                    SqlParameter parameter = new SqlParameter
+                    connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
+                    connection.Open();
+                    string sql = "insert into Source" + "(Name) values" + "(@Name)";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        ParameterName = "@Name",
-                        Value = SName,
-                        SqlDbType = SqlDbType.Char,
-                        Size = 10
-                    };
-                    command.Parameters.Add(parameter);
-                    command.ExecuteNonQuery();
+                        SqlParameter parameter = new SqlParameter
+                        {
+                            ParameterName = "@Name",
+                            Value = source,
+                            SqlDbType = SqlDbType.Char,
+                            Size = 100
+                         };
+                        command.Parameters.Add(parameter);
+                        command.ExecuteNonQuery();
+                     }
                 }
             }
-        }
 
         public void DeleteSources(int Id)
         {
@@ -87,13 +91,13 @@ namespace SourceDAL.Repository
             }
         }
 
-        public void EditSources(string NewName,string Name)
+        public void EditSources(object source,object sourcenewname)
         {
             using (SqlConnection connection = new SqlConnection())
             {
                 connection.ConnectionString = ("Data Source=ACUPC-0906;Initial Catalog=NotificationHub;Integrated Security=True");
                 connection.Open();
-                string sql = $"update Source set  Name='{NewName}' where Name='{Name}'";
+                string sql = $"update Source set  Name='{sourcenewname}' where Name='{source}'";
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     
