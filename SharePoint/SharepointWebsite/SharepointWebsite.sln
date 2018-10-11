@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginAndBackup", "LoginAndBackup\LoginAndBackup.csproj", "{9516574F-31B5-4DB6-9E27-780D640E06DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9516574F-31B5-4DB6-9E27-780D640E06DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9516574F-31B5-4DB6-9E27-780D640E06DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9516574F-31B5-4DB6-9E27-780D640E06DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9516574F-31B5-4DB6-9E27-780D640E06DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {683577A3-ADC0-4CA6-B4A3-D4C6A6F29597}
+	EndGlobalSection
+EndGlobal
